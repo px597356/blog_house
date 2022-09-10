@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack第一节 | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/img/icon.svg">
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.2fd020b2.js" as="script"><link rel="preload" href="/assets/js/2.3c2e6582.js" as="script"><link rel="preload" href="/assets/js/11.517f695c.js" as="script"><link rel="prefetch" href="/assets/js/10.a364222e.js"><link rel="prefetch" href="/assets/js/12.57cdd2fb.js"><link rel="prefetch" href="/assets/js/13.a03be5d7.js"><link rel="prefetch" href="/assets/js/3.ab767734.js"><link rel="prefetch" href="/assets/js/4.da8b72e6.js"><link rel="prefetch" href="/assets/js/5.048c6337.js"><link rel="prefetch" href="/assets/js/6.29f38f88.js"><link rel="prefetch" href="/assets/js/7.cafa4535.js"><link rel="prefetch" href="/assets/js/8.88ad59d3.js"><link rel="prefetch" href="/assets/js/9.de5a257e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/icon.svg" alt="Hello VuePress" class="logo"> <span class="site-name can-hide">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/basis/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/senior/" class="nav-link">
+  高级
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/basis/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/senior/" class="nav-link">
+  高级
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span></span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/basis/" aria-current="page" class="sidebar-link">前言</a></li><li><a href="/basis/one.html" aria-current="page" class="active sidebar-link">webpack第一节</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/basis/one.html#_1-资源文件" class="sidebar-link">1.资源文件</a></li><li class="sidebar-sub-header"><a href="/basis/one.html#_2-创建目录" class="sidebar-link">2.创建目录</a></li><li class="sidebar-sub-header"><a href="/basis/one.html#_3-下载依赖" class="sidebar-link">3.下载依赖</a></li><li class="sidebar-sub-header"><a href="/basis/one.html#_4-启动webpack" class="sidebar-link">4.启动Webpack</a></li><li class="sidebar-sub-header"><a href="/basis/one.html#_5-观察输出文件" class="sidebar-link">5.观察输出文件</a></li><li class="sidebar-sub-header"><a href="/basis/one.html#小结" class="sidebar-link">小结</a></li></ul></li><li><a href="/basis/two.html" class="sidebar-link">webpack第二节</a></li><li><a href="/basis/three.html" class="sidebar-link">Webpack第三节</a></li><li><a href="/basis/four.html" class="sidebar-link">webpack第四节</a></li><li><a href="/basis/five.html" class="sidebar-link">webpack第五节</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="webpack第一节"><a href="#webpack第一节" class="header-anchor">#</a> webpack第一节</h1> <h2 id="_1-资源文件"><a href="#_1-资源文件" class="header-anchor">#</a> 1.资源文件</h2> <div class="language- extra-class"><pre class="language-text"><code>webpack_code # 项目根目录（所有指令必须在这个目录运行）
+     --src # 项目源码目录
+       -- js # js文件目录
+         -- count.js
+         -- sum.js
+       -- main.js # 项目主文件（入口文件）
+</code></pre></div><h2 id="_2-创建目录"><a href="#_2-创建目录" class="header-anchor">#</a> 2.创建目录</h2> <p>创建文件<code>src</code>并在该目录下创建<code>main.js</code>文件</p> <ul><li><strong>count.js</strong></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">count</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> x <span class="token operator">-</span> y
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><strong>sum.js</strong></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> args<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">p<span class="token punctuation">,</span> c</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> p <span class="token operator">+</span> c<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li><strong>main.js</strong></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> count <span class="token keyword">from</span> <span class="token string">'./js/count'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> sum <span class="token keyword">from</span> <span class="token string">'./js/sum'</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_3-下载依赖"><a href="#_3-下载依赖" class="header-anchor">#</a> 3.下载依赖</h2> <p>打开终端，来到项目根目录。运行以下指令：</p> <ul><li>初始化 <code>package.json</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>npm init -y
+</code></pre></div><p>此时会生成一个基础的<code>package.json</code>文件。</p> <p><strong>需要注意的是 <code>package.json</code> 中 <code>name</code> 字段不能叫做 <code>webpack</code>，否则下一步会报错。</strong></p> <ul><li>下载依赖</li></ul> <div class="language- extra-class"><pre class="language-text"><code>npm i webpack webpack-cli -D
+</code></pre></div><h2 id="_4-启动webpack"><a href="#_4-启动webpack" class="header-anchor">#</a> 4.启动Webpack</h2> <ul><li>开发模式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>npx webpack ./src/main.js --mode=development
+</code></pre></div><ul><li>生产模式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>npx webpack ./src/main.js --mode=production
+</code></pre></div><p><code>npx webpack</code>：是用来运行本地安装 <code>Webpack</code> 包的。</p> <p><code>./src/main.js</code>：指定 <code>Webpack</code> 从 <code>main.js</code> 文件开始打包，不但会打包 <code>main.js</code> ，还会将其依赖也一起打包进来。</p> <p><code>--mod-xxx</code>：指定模式（环境）。</p> <h2 id="_5-观察输出文件"><a href="#_5-观察输出文件" class="header-anchor">#</a> 5.观察输出文件</h2> <p>默认  <code>Webpack</code> 会将文件打包输出到 <code>dist</code> 目录下，我们查看 <code>dist</code> 目录下文件情况就好了。</p> <h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p><code>Webpack</code> 本身功能比较少，只能处理 js 资源，一旦遇到 css 等其他资源就会报错。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/basis/" class="prev router-link-active">
+        前言
+      </a></span> <span class="next"><a href="/basis/two.html">
+        webpack第二节
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2fd020b2.js" defer></script><script src="/assets/js/2.3c2e6582.js" defer></script><script src="/assets/js/11.517f695c.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack第二节 | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/img/icon.svg">
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.2fd020b2.js" as="script"><link rel="preload" href="/assets/js/2.3c2e6582.js" as="script"><link rel="preload" href="/assets/js/13.a03be5d7.js" as="script"><link rel="prefetch" href="/assets/js/10.a364222e.js"><link rel="prefetch" href="/assets/js/11.517f695c.js"><link rel="prefetch" href="/assets/js/12.57cdd2fb.js"><link rel="prefetch" href="/assets/js/3.ab767734.js"><link rel="prefetch" href="/assets/js/4.da8b72e6.js"><link rel="prefetch" href="/assets/js/5.048c6337.js"><link rel="prefetch" href="/assets/js/6.29f38f88.js"><link rel="prefetch" href="/assets/js/7.cafa4535.js"><link rel="prefetch" href="/assets/js/8.88ad59d3.js"><link rel="prefetch" href="/assets/js/9.de5a257e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/icon.svg" alt="Hello VuePress" class="logo"> <span class="site-name can-hide">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/basis/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/senior/" class="nav-link">
+  高级
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/basis/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/senior/" class="nav-link">
+  高级
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span></span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/basis/" aria-current="page" class="sidebar-link">前言</a></li><li><a href="/basis/one.html" class="sidebar-link">webpack第一节</a></li><li><a href="/basis/two.html" aria-current="page" class="active sidebar-link">webpack第二节</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/basis/two.html#基本配置" class="sidebar-link">基本配置</a></li><li class="sidebar-sub-header"><a href="/basis/two.html#_5-大核心概念" class="sidebar-link">5 大核心概念</a></li><li class="sidebar-sub-header"><a href="/basis/two.html#准备-webpack-配置文件" class="sidebar-link">准备 Webpack 配置文件</a></li></ul></li><li><a href="/basis/three.html" class="sidebar-link">Webpack第三节</a></li><li><a href="/basis/four.html" class="sidebar-link">webpack第四节</a></li><li><a href="/basis/five.html" class="sidebar-link">webpack第五节</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="webpack第二节"><a href="#webpack第二节" class="header-anchor">#</a> webpack第二节</h1> <h2 id="基本配置"><a href="#基本配置" class="header-anchor">#</a> 基本配置</h2> <p>在开始使用 <code>Webpack</code> 之前，我们需要对 <code>Webpack</code> 的配置有一定的认识。</p> <h2 id="_5-大核心概念"><a href="#_5-大核心概念" class="header-anchor">#</a> 5 大核心概念</h2> <p>1.entry（入口）</p> <p>指示 <code>Webpack</code> 从哪个文件开始打包</p> <p>2.output（输出）</p> <p>指示 <code>Webpack</code> 打包完的文件输出到哪里去，如何命名等</p> <p>3.loader（加载器）</p> <p><code>Webpack</code> 本身只能处理 <code>js</code>、<code>json</code> 等资源，其他资源（样式、图片等）需要借助 <code>loader</code>，<code>Webpack</code> 才能解析</p> <p>4.plugins（插件）</p> <p>扩展 <code>Webpack</code> 的功能</p> <p>5.mode（模式）</p> <p>主要由两种模式：</p> <ul><li><p>开发模式：development</p></li> <li><p>生产模式：production</p></li></ul> <h2 id="准备-webpack-配置文件"><a href="#准备-webpack-配置文件" class="header-anchor">#</a> 准备 <code>Webpack</code> 配置文件</h2> <p>在项目根目录下新建文件：<code>webpack.config.js</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span> <span class="token comment">// nodejs 核心模块,专门用来处理路径问题</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 入口</span>
+    <span class="token literal-property property">entry</span><span class="token operator">:</span> <span class="token string">'./src/main.js'</span><span class="token punctuation">,</span> <span class="token comment">// 相对路径</span>
+    <span class="token comment">// 输出</span>
+    <span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 文件的输出路径</span>
+        <span class="token comment">// __dirname是nodejs的变量，代表当前文件的文件夹目录</span>
+        <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 绝对路径</span>
+        <span class="token comment">// 文件名</span>
+        <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'main.js'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 加载器</span>
+    <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 数组复数，对象是单数，例如module:{}，rules:[]，plugins:[]</span>
+        <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">// loader的配置</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 插件</span>
+    <span class="token literal-property property">plugins</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token comment">// plugins的配置</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment">// 模式</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Webpack 是基于 Node.js 运行的，所以采用 Common.js 模块化规范</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/basis/one.html" class="prev">
+        webpack第一节
+      </a></span> <span class="next"><a href="/basis/three.html">
+        Webpack第三节
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2fd020b2.js" defer></script><script src="/assets/js/2.3c2e6582.js" defer></script><script src="/assets/js/13.a03be5d7.js" defer></script>
+  </body>
+</html>

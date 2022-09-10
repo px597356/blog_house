@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>webpack第四节 | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/img/icon.svg">
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.9825735b.css" as="style"><link rel="preload" href="/assets/js/app.2fd020b2.js" as="script"><link rel="preload" href="/assets/js/2.3c2e6582.js" as="script"><link rel="preload" href="/assets/js/10.a364222e.js" as="script"><link rel="prefetch" href="/assets/js/11.517f695c.js"><link rel="prefetch" href="/assets/js/12.57cdd2fb.js"><link rel="prefetch" href="/assets/js/13.a03be5d7.js"><link rel="prefetch" href="/assets/js/3.ab767734.js"><link rel="prefetch" href="/assets/js/4.da8b72e6.js"><link rel="prefetch" href="/assets/js/5.048c6337.js"><link rel="prefetch" href="/assets/js/6.29f38f88.js"><link rel="prefetch" href="/assets/js/7.cafa4535.js"><link rel="prefetch" href="/assets/js/8.88ad59d3.js"><link rel="prefetch" href="/assets/js/9.de5a257e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9825735b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/icon.svg" alt="Hello VuePress" class="logo"> <span class="site-name can-hide">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/basis/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/senior/" class="nav-link">
+  高级
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/basis/" class="nav-link router-link-active">
+  基础
+</a></div><div class="nav-item"><a href="/senior/" class="nav-link">
+  高级
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span></span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/basis/" aria-current="page" class="sidebar-link">前言</a></li><li><a href="/basis/one.html" class="sidebar-link">webpack第一节</a></li><li><a href="/basis/two.html" class="sidebar-link">webpack第二节</a></li><li><a href="/basis/three.html" class="sidebar-link">Webpack第三节</a></li><li><a href="/basis/four.html" aria-current="page" class="active sidebar-link">webpack第四节</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/basis/four.html#输出修改文件目录" class="sidebar-link">输出修改文件目录</a></li><li class="sidebar-sub-header"><a href="/basis/four.html#自动清空上一次打包内容" class="sidebar-link">自动清空上一次打包内容</a></li><li class="sidebar-sub-header"><a href="/basis/four.html#处理文字图标资源" class="sidebar-link">处理文字图标资源</a></li><li class="sidebar-sub-header"><a href="/basis/four.html#处理其他资源" class="sidebar-link">处理其他资源</a></li></ul></li><li><a href="/basis/five.html" class="sidebar-link">webpack第五节</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="webpack第四节"><a href="#webpack第四节" class="header-anchor">#</a> webpack第四节</h1> <h2 id="输出修改文件目录"><a href="#输出修改文件目录" class="header-anchor">#</a> 输出修改文件目录</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 输出</span>
+<span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 所有文件的输出路径</span>
+    <span class="token comment">// __dirname是nodejs的变量，代表当前文件的文件夹目录</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 绝对路径</span>
+    <span class="token comment">// 文件名</span>
+    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'js/main.js'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">// loader的配置</span>
+            <span class="token punctuation">{</span>
+                <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(png|jpe?g|gif|webp|svg)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'asset'</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">parser</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token literal-property property">dataUrlCondition</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token comment">// 小于32kb的图片转base64</span>
+                        <span class="token comment">// 优点: 减少请求数量  缺点: 体积会变得更大</span>
+                        <span class="token literal-property property">maxSize</span><span class="token operator">:</span> <span class="token number">32</span> <span class="token operator">*</span> <span class="token number">1024</span>  <span class="token comment">// 32kb</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token literal-property property">generator</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// 输出图片名称</span>
+                    <span class="token comment">// [hash:10] hash值取前10位</span>
+                    <span class="token comment">// ext ---&gt; png/jpg/svg...</span>
+                    <span class="token comment">// query 参数</span>
+                    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'images/[hash:10][ext][query]'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="自动清空上一次打包内容"><a href="#自动清空上一次打包内容" class="header-anchor">#</a> 自动清空上一次打包内容</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 输出</span>
+<span class="token literal-property property">output</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 自动清空上次打包的内容</span>
+    <span class="token comment">// 原理: 在打包前将path整个目录内容清空，再进行打包</span>
+    <span class="token literal-property property">clean</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="处理文字图标资源"><a href="#处理文字图标资源" class="header-anchor">#</a> 处理文字图标资源</h2> <p>下载字体文件 <code>.ttf</code> <code>.woff</code> <code>.woff2</code> 并且放在 <code>src</code> 目录下的 <code>fonts</code> 文件下</p> <h5 id="配置如下"><a href="#配置如下" class="header-anchor">#</a> 配置如下</h5> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">// loader的配置</span>
+            <span class="token punctuation">{</span>
+                <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(ttf|woff2?)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+                <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'asset/resource'</span><span class="token punctuation">,</span> <span class="token comment">// 不走 base64 格式</span>
+                <span class="token literal-property property">generator</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// 输出名称</span>
+                    <span class="token literal-property property">filename</span><span class="token operator">:</span> <span class="token string">'fonts/[hash:10][ext][query]'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="处理其他资源"><a href="#处理其他资源" class="header-anchor">#</a> 处理其他资源</h2> <div class="language- extra-class"><pre class="language-text"><code>module: {
+        rules: [
+            // loader的配置
+            {
+                test: /\.(mp3|mp4|avi|key|md)$/,
+                type: 'asset/resource', // 不走 base64 格式
+                generator: {
+                    // 输出名称
+                    filename: 'other/[hash:10][ext][query]'
+                }
+            },
+        ]
+},
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/basis/three.html" class="prev">
+        Webpack第三节
+      </a></span> <span class="next"><a href="/basis/five.html">
+        webpack第五节
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2fd020b2.js" defer></script><script src="/assets/js/2.3c2e6582.js" defer></script><script src="/assets/js/10.a364222e.js" defer></script>
+  </body>
+</html>
