@@ -1,54 +1,9 @@
 module.exports = {
+    theme: 'reco',
+    // base:'/blog_house/',
     title: '狸猫小屋',
     description: '欢迎来到狸猫的世界',
-    theme: 'reco',
     dest: 'public',
-    // themeConfig: {
-    //     logo: '/img/icon.svg',
-    //     nav: [
-    //         { text: '首页', link: '/' },
-    //         { 
-    //             text: '基础', 
-    //             link: "/basis/",
-    //         },
-    //         {
-    //           text: "高级",
-    //           link: "/senior/",
-    //         },
-    //     ],
-    //     sidebar: {
-    //         // "/basis/": [
-    //         //     {
-    //         //         text: '基础配置',
-    //         //         children: [
-    //         //             "/basis/README.md",
-    //         //             // "/basis/one.md",
-    //         //             // "/basis/two.md",
-    //         //             // "/basis/three.md",
-    //         //             // "/basis/four.md",
-    //         //             // "/basis/five.md",
-    //         //         ]
-    //         //     }
-    //         // ],
-    //         "/basis/": [
-    //             {
-    //               text: "基础配置",
-    //               children: [
-    //                 "",
-    //                 // "/basis/README.md",
-    //                 "/basis/one.md",
-    //                 "/basis/two.md",
-    //                 "/basis/three.md",
-    //                 "/basis/four.md",
-    //                 "/basis/five.md",
-    //               ],
-    //             },
-    //           ],
-    //     }
-    // },
-    // head: [
-    //     ['link', { rel: 'icon', href: '/img/icon.svg' }]
-    // ]
     themeConfig: {
       nav: [
         { text: '首页', link: '/', icon: 'reco-home' },
@@ -81,17 +36,17 @@ module.exports = {
           'two',
           'three',
           'four',
-          'five',
+          // 'five',
         ]
       },  
       type: 'blog',
-
+      subSidebar: 'auto',//在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
       logo: '/img/icon.svg',
       // 搜索设置
       search: true,
       searchMaxSuggestions: 10,
       // 自动形成侧边导航
-      // sidebar: 'auto',
+      sidebar: 'auto',
       // 最后更新时间
       lastUpdated: 'Last Updated',
       // 作者
@@ -101,7 +56,7 @@ module.exports = {
       // 备案号
       // record: 'xxxx',
       // 项目开始时间
-      startYear: '2028'
+      startYear: '2022'
     },
     head: [
       ['link', { rel: 'icon', href: '/img/favicon.svg' }],

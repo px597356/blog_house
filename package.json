@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "vuepress": "^1.9.7",
+    "vuepress": "^1.9.7"
+  },
+  "dependencies": {
     "vuepress-theme-reco": "^1.6.14"
   },
   "name": "webpack_docs",
@@ -8,7 +10,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   }
 }
