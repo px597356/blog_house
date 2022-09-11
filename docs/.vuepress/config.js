@@ -1,9 +1,9 @@
 module.exports = {
     theme: 'reco',
-    // base:'/blog_house/',
+    base:'/blog_house/',
     title: '狸猫小屋',
     description: '欢迎来到狸猫的世界',
-    dest: 'public',
+    // dest: 'public',
     themeConfig: {
       nav: [
         { text: '首页', link: '/', icon: 'reco-home' },
@@ -23,30 +23,27 @@ module.exports = {
         //   ]
         // }
       ],
+      // 自动形成侧边导航
+      // sidebar: 'auto',
+      // subSidebar: 'auto',//在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
+      sidebarDepth: 2,
       sidebar: {
-        // '/docs/theme-reco/': [
-        //   '',
-        //   'theme',
-        //   'plugin',
-        //   'api'
-        // ],
         '/basis/': [
           '',
           'one',
           'two',
           'three',
           'four',
-          // 'five',
+          'five',
+          'six',
         ]
       },  
       type: 'blog',
-      subSidebar: 'auto',//在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
       logo: '/img/icon.svg',
+      
       // 搜索设置
       search: true,
       searchMaxSuggestions: 10,
-      // 自动形成侧边导航
-      sidebar: 'auto',
       // 最后更新时间
       lastUpdated: 'Last Updated',
       // 作者

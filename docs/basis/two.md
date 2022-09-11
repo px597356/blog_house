@@ -3,6 +3,9 @@ title: webpack笔记2
 date: 2022-09-07
 tags:
  - webpack
+
+categories:
+ - webpack
 ---
 
 # webpack第二节
