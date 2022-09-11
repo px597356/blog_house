@@ -37,6 +37,7 @@ module.exports = {
           'five',
           'six',
           'seven',
+          'eight',
         ]
       },  
       type: 'blog',
