@@ -204,7 +204,7 @@ asyncFunc1(opt, (...args1)=> {
 
       **代码演示:**
 
-      ```
+      ```javascript
       let p = new Promise((resolve, reject)=>{
           // resolve('ok')
           reject('error')
