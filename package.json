@@ -6,10 +6,8 @@
   "name": "webpack_docs",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "dev": "vuepress dev . --open --host \"localhost\"",
+    "build": "vuepress build ."
   }
 }

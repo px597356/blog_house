@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /img/icon.svg
+heroImage: /icon.svg
 heroText: 狸猫小屋
 tagline: 网上冲浪累了吧，来这里休息休息吧！
 # actionText: 快速上手 →
