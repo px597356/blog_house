@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: js
 date: 2022-07-13
 tags:
@@ -6,7 +6,7 @@ tags:
 
 categories:
  - js
---- -->
+---
 
 # js基础
 

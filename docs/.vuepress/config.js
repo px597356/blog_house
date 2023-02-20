@@ -12,7 +12,8 @@ module.exports = {
           // link: '/docs/theme-reco/'
           items: [
             // { text: 'vuepress-reco', link: '/docs/theme-reco/' },
-            { text: 'webpack', link: '/basis/' }
+            { text: 'webpack', link: '/basis/' },
+            { text: 'javascript', link: '/javascript/' },
           ]
         },
         { text: '时间线', link: '/timeline/', icon: 'reco-date' },
@@ -38,7 +39,11 @@ module.exports = {
           'six',
           'seven',
           'eight',
-        ]
+        ],
+        '/javascript/': [
+          '',
+          'promise/Promise',
+        ],
       },  
       type: 'blog',
       logo: '/img/icon.svg',
