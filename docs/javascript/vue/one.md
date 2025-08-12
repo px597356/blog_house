@@ -1,12 +1,12 @@
 ---
-title: js
+title: vue
 date: 2025-08-12
 tags:
- - js
+ - vue
 
 categories:
- - js
+ - vue
 ---
 
-# js基础
+# Vue
 
