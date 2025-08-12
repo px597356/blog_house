@@ -12,6 +12,8 @@ module.exports = {
           items: [
             { text: 'webpack', link: '/docs/basis/' },
             { text: 'javascript', link: '/docs/javascript/' },
+            { text: 'promise', link: '/docs/javascript/promise/' },
+            { text: 'vue', link: '/docs/vue/' },
           ]
         },
         { text: '时间线', link: '/timeline/', icon: 'reco-date' },
